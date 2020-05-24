@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
 
 from keras.layers import Convolution2D,  MaxPooling2D, Flatten, Dense
@@ -129,6 +128,11 @@ print("Accuracy:", accuracy)
 from keras.models import load_model
 
 classifier = load_model('Guess_who_am_I.h5')
+
+accuracy_file = open('/mlops/accuracy_check.txt','w')
+accuracy_file.write(str(scores[1]))
+accuracy_file.close()
+
 
 
 # In[15]:
