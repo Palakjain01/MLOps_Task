@@ -128,7 +128,7 @@ print("Accuracy:", accuracy)
 
 from keras.models import load_model
 
-classifier = load_model('Guess_who_am_I.h5')
+classifier = load_model('Predict_me.h5')
 
 
 # In[15]:
