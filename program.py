@@ -92,8 +92,8 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = 'face_data/train/'
-validation_data_dir = 'face_data/test/'
+train_data_dir = '/mnt/face_data/train/'
+validation_data_dir = '/mnt/face_data/test/'
 
 # Let's use some data augmentaiton 
 train_datagen = ImageDataGenerator(
