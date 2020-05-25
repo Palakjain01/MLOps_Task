@@ -133,7 +133,7 @@ classifier = load_model('Predict_me.h5')
 
 # In[15]:
 
-
+'''
 import os
 import cv2
 import numpy as np
@@ -185,3 +185,4 @@ for i in range(0,3):
     cv2.waitKey(0)
 
 cv2.destroyAllWindows()
+'''
