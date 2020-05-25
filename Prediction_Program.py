@@ -68,8 +68,8 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = 'face_data/train/'
-validation_data_dir = 'face_data/test/'
+train_data_dir = '/mnt/face_data/train/'
+validation_data_dir = '/mnt/face_data/test/'
 
 # Let's use some data augmentaiton 
 train_datagen = ImageDataGenerator(
@@ -121,13 +121,19 @@ accuracy=float(score[1]*100)
 #print("Accuracy: %.2f%%" %float(score[1]*100))
 print("Accuracy:", accuracy)
 
-
-# In[14]:
-
-
 from keras.models import load_model
 
-classifier = load_model('Guess_who_am_I.h5')
+classifier = load_model('Predict_me.h5')
+
+file=open("accuracy.txt","w")
+file.write(str(score[1]))
+file.close()
+
+r=open("history","a")
+r.write('Test loss: {}'.format(str(score[0])))
+r.write('\nTest accuracy: {}'.format(str(score[1])))
+r.close()
+
 
 accuracy_file = open('/mlops/accuracy_check.txt','w')
 accuracy_file.write(str(scores[1]))
@@ -137,7 +143,7 @@ accuracy_file.close()
 
 # In[15]:
 
-
+'''
 import os
 import cv2
 import numpy as np
@@ -189,16 +195,4 @@ for i in range(0,3):
     cv2.waitKey(0)
 
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+'''
