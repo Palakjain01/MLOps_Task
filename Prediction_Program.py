@@ -122,13 +122,19 @@ accuracy=float(score[1]*100)
 #print("Accuracy: %.2f%%" %float(score[1]*100))
 print("Accuracy:", accuracy)
 
-
-# In[14]:
-
-
 from keras.models import load_model
 
 classifier = load_model('Predict_me.h5')
+
+file=open("accuracy.txt","w")
+file.write(str(score[1]))
+file.close()
+
+r=open("history","a")
+r.write('Test loss: {}'.format(str(score[0])))
+r.write('\nTest accuracy: {}'.format(str(score[1])))
+r.close()
+
 
 
 # In[15]:
