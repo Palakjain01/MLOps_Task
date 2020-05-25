@@ -159,10 +159,10 @@ os.system("cp hyper_parameters.py old_hyper_parameters.py")
 
 if accuracy > 90:
     #system("echo True accuracy={}% > Accuracy.txt".format(accuracy))
-    system("echo 'True' accuracy={}% > /Accuracy.txt".format(accuracy))
+    os.system("echo 'True' accuracy={}% > /Accuracy.txt".format(accuracy))
 else:
     #system("echo False accuracy={}% > Accuracy.txt".format(accuracy))
-    system("echo 'False' accuracy={}% > /Accuracy.txt".format(accuracy))
+    os.system("echo 'False' accuracy={}% > /Accuracy.txt".format(accuracy))
 
 
 # In[15]:
