@@ -159,7 +159,7 @@ import os
 #os.system("cp /mldata/hyper_parameters.py  /mldata/old_hyper_parameters.py")
 
 
-if accuracy > 90:
+if accuracy > 80:
     #system("echo True accuracy={}% > Accuracy.txt".format(accuracy))
     os.system("echo 'True' accuracy={}% > /mnt/Accuracy.txt".format(accuracy))
 else:
