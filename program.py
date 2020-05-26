@@ -154,15 +154,15 @@ print(f"accuracy {accuracy}%")
 
 
 import os
-os.system("cp hyper_parameters.py old_hyper_parameters.py")
+os.system("cp /mldata/hyper_parameters.py  /mldata/old_hyper_parameters.py")
 
 
 if accuracy > 90:
     #system("echo True accuracy={}% > Accuracy.txt".format(accuracy))
-    os.system("echo 'True' accuracy={}% > /Accuracy.txt".format(accuracy))
+    os.system("echo 'True' accuracy={}% > /mnt/Accuracy.txt".format(accuracy))
 else:
     #system("echo False accuracy={}% > Accuracy.txt".format(accuracy))
-    os.system("echo 'False' accuracy={}% > /Accuracy.txt".format(accuracy))
+    os.system("echo 'False' accuracy={}% > /mnt/Accuracy.txt".format(accuracy))
 
 
 # In[15]:
