@@ -51,7 +51,7 @@ def addCRPs(i):
         kernel_size=(hp.kernel_size,hp.kernel_size),activation='relu',
         input_shape=input_shape))
         model.add(MaxPooling2D(pool_size=(hp.pool_size,hp.pool_size)))
-    elif i ==4:  #3 Conv and 1 Pool
+    else :  #3 Conv and 1 Pool
         model.add(Convolution2D(filters=hp.no_of_filters*4,
         kernel_size=(hp.kernel_size+4,hp.kernel_size+4),activation='relu',
         input_shape=input_shape))
@@ -64,6 +64,8 @@ def addCRPs(i):
         kernel_size=(hp.kernel_size,hp.kernel_size),activation='relu',
         input_shape=input_shape))
         model.add(MaxPooling2D(pool_size=(hp.pool_size,hp.pool_size)))
+    
+        
 
         
 addCRPs(hp.i)      
@@ -154,7 +156,7 @@ print(f"accuracy {accuracy}%")
 
 
 import os
-os.system("cp /mldata/hyper_parameters.py  /mldata/old_hyper_parameters.py")
+#os.system("cp /mldata/hyper_parameters.py  /mldata/old_hyper_parameters.py")
 
 
 if accuracy > 90:
@@ -211,48 +213,3 @@ with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
     server.sendmail(sender_email, receiver_email, message)
     
 '''    
-    
-    
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
