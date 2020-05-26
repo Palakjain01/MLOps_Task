@@ -186,7 +186,7 @@ classifier = load_model('Predict_me.h5')
 
 
 # Code to send email
-
+'''
 import smtplib, ssl
 
 port = 465 #For SSL
@@ -210,7 +210,7 @@ with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
     server.login(sender_email,password)
     server.sendmail(sender_email, receiver_email, message)
     
-    
+'''    
     
     
 
