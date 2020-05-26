@@ -92,8 +92,8 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = 'face_data/train/'
-validation_data_dir = 'face_data/test/'
+train_data_dir = '/mnt/face_data/train/'
+validation_data_dir = '/mnt/face_data/test/'
 
 # Let's use some data augmentaiton 
 train_datagen = ImageDataGenerator(
@@ -159,10 +159,10 @@ os.system("cp hyper_parameters.py old_hyper_parameters.py")
 
 if accuracy > 90:
     #system("echo True accuracy={}% > Accuracy.txt".format(accuracy))
-    system("echo 'True' accuracy={}% > /Accuracy.txt".format(accuracy))
+    os.system("echo 'True' accuracy={}% > /Accuracy.txt".format(accuracy))
 else:
     #system("echo False accuracy={}% > Accuracy.txt".format(accuracy))
-    system("echo 'False' accuracy={}% > /Accuracy.txt".format(accuracy))
+    os.system("echo 'False' accuracy={}% > /Accuracy.txt".format(accuracy))
 
 
 # In[15]:
